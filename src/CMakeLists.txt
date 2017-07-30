@@ -62,10 +62,10 @@ if (MSVC)
 endif ()
 
 target_link_libraries(ConnectivityTool CryptoNoteCore Common Logging Crypto P2P Rpc Http Serialization System ${Boost_LIBRARIES})
-target_link_libraries(Daemon CryptoNoteCore P2P Rpc Serialization System Http Logging Common Crypto upnpc-static BlockchainExplorer ${Boost_LIBRARIES})
-target_link_libraries(SimpleWallet Wallet NodeRpcProxy Transfers Rpc Http CryptoNoteCore System Logging Common Crypto Serialization ${Boost_LIBRARIES})
-target_link_libraries(PaymentGateService PaymentGate JsonRpcServer Wallet NodeRpcProxy Transfers CryptoNoteCore Crypto P2P Rpc Http Serialization System Logging Common InProcessNode upnpc-static BlockchainExplorer ${Boost_LIBRARIES})
-target_link_libraries(Miner CryptoNoteCore Rpc Serialization System Http Logging Common Crypto ${Boost_LIBRARIES})
+target_link_libraries(Daemon CryptoNoteCore P2P Rpc System Http Logging Common Serialization Crypto upnpc-static BlockchainExplorer ${Boost_LIBRARIES})
+target_link_libraries(SimpleWallet Wallet NodeRpcProxy Transfers Rpc Http CryptoNoteCore System Logging Common Serialization Crypto ${Boost_LIBRARIES})
+target_link_libraries(PaymentGateService PaymentGate JsonRpcServer Wallet NodeRpcProxy Transfers CryptoNoteCore Crypto P2P Rpc Http Common Serialization System Logging InProcessNode upnpc-static BlockchainExplorer ${Boost_LIBRARIES})
+target_link_libraries(Miner CryptoNoteCore Rpc System Http Logging Common Serialization Crypto ${Boost_LIBRARIES})
 
 add_dependencies(Rpc version)
 
